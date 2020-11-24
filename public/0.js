@@ -49,18 +49,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "login",
   data: function data() {
-    return {
-      password: '',
-      passwordFieldType: 'password',
-      isEye: false
-    };
+    return {};
   },
   methods: {
-    switchVisibility: function switchVisibility() {
-      this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
+    inputFocus: function inputFocus() {
+      var inputs = document.querySelectorAll(".input");
+      inputs.forEach(function (input) {
+        input.addEventListener("focus", function addcl() {
+          var parent = this.parentNode.parentNode;
+          parent.classList.add("focus");
+        });
+        input.addEventListener("blur", function remcl() {
+          var parent = this.parentNode.parentNode;
+
+          if (this.value == "") {
+            parent.classList.remove("focus");
+          }
+        });
+      });
     }
   }
 });
@@ -79,7 +91,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\nbody{\nbackground: linear-gradient(to right, #d8f385, #fbff00);\ndisplay: flex;\njustify-content: center;\nalign-items:center;\nheight:100vh;\n}\n#app {\n  background-color: inherit;\n  font-size: 15px;\n}\n.container{\n  background-color:white;\n  border-radius: 1rem;\n  width:300px;\n  height: 400px;\n  overflow: hidden;\n}\n.center__box{\n  position: absolute;\n  top: 40%;\n  left: 0.5rem;\n  transform: translateY(-50%);\n  z-index: 2;\n  color: white;\n}\n.center__box span,.center__box h1{\n  padding:0;\n  margin:0\n}\n.form__component{\n  display: flex;\n  justify-content: center;\n  align-items: stretch;\n  flex-direction: column;\n  padding:1rem;\n}\n.box__space{\n  margin-bottom: 1rem;\n}\n.input__box{\n  border:1px solid rgb(209, 208, 208);\n  position: relative;\n  margin:1rem 0;\n  border-radius:0.5rem;\n  padding:0.25rem;\n}\n.input__label{\n  position: absolute;\n  top:0;\n  transform: translateY(-50%);\n  left: 1rem;\n  font-size: 0.7rem;\n  font-weight: 600;\n  background-color: white;\n  padding:0.25rem;\n  text-transform: uppercase;\n}\n.input__model{\n  border:none;\n  outline:none;\n  height:26px;\n  padding:0 1rem;\n  font-weight: bold;\n}\n.input__icon{\n  position: absolute;\n  right: 0.5rem;\n  top: 50%;\n  transform: translateY(-50%);\n  color:rgb(209, 208, 208);\n}\n.sub__action{\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  font-size: 0.75rem;\n}\n.main__action{\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  margin-top: 1rem;\n}\n.login__btn{\nbackground: linear-gradient(to right, #59ea72, #16ad52);\nbox-shadow: 0px 11px 34px -10px #46a952;\n padding:0.75rem;\n width:75%;\n border:none;\n outline:none;\n border-radius: 100px;\n color:white;\n font-weight: bold;\n display:flex;\n justify-content: center;\n align-items: center;\n cursor: pointer;\n}\n.sub__action__link{\n  color:black;\n  text-decoration: initial;\n}\ni{\n    font-family: 'FontAwesome';\n    font-size: 18px;\n}\n.input__icon{\n  position: absolute;\n  right: 0.5rem;\n  top: 50%;\n  transform: translateY(-50%);\n  color:#717171;\n}\n.btn-inhenrt {\n  background: inherit;\n  border: none;\n}\nbutton:focus {\n  outline: none;\n}\n.btn-register {\n  color: inherit;\n}\n.btn-register:hover  {\n  color: inherit;\n  text-decoration:  none;\n}\n", ""]);
+exports.push([module.i, "\n#app{\n\tpadding: 0;\n\tmargin: 0;\n\tbox-sizing: border-box;\n\tbackground-color: initial;\n}\nbody{\n    font-family: 'Poppins', sans-serif;\n    overflow: hidden;\n}\n.wave{\n\tposition: fixed;\n\tbottom: 0;\n\tleft: 0;\n\theight: 100%;\n\tz-index: -1;\n}\n.container{\n    width: 100vw;\n    height: 100vh;\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-gap :7rem;\n    padding: 0 2rem;\n}\n.img{\n\tdisplay: flex;\n\tjustify-content: flex-end;\n\talign-items: center;\n}\n.login-content{\n\tdisplay: flex;\n\tjustify-content: flex-start;\n\talign-items: center;\n\ttext-align: center;\n}\n.img img{\n\twidth: 500px;\n}\nform{\n\twidth: 360px;\n}\n.login-content img{\n    height: 100px;\n}\n.login-content h2{\n\tmargin: 15px 0;\n\tcolor: #333;\n\ttext-transform: uppercase;\n\tfont-size: 2.9rem;\n}\n.login-content .input-div{\n\tposition: relative;\n    display: grid;\n    grid-template-columns: 7% 93%;\n    margin: 25px 0;\n    padding: 5px 0;\n    border-bottom: 2px solid #d9d9d9;\n}\n.login-content .input-div.one{\n\tmargin-top: 0;\n}\n.i{\n\tcolor: #d9d9d9;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n.i i{\n\ttransition: .3s;\n}\n.input-div > div{\n    position: relative;\n\theight: 45px;\n}\n.input-div > div > h5{\n\tposition: absolute;\n\tleft: 10px;\n\ttop: 50%;\n\ttransform: translateY(-50%);\n\tcolor: #999;\n\tfont-size: 18px;\n\ttransition: .3s;\n}\n.input-div:before, .input-div:after{\n\tcontent: '';\n\tposition: absolute;\n\tbottom: -2px;\n\twidth: 0%;\n\theight: 2px;\n\tbackground-color: #38d39f;\n\ttransition: .4s;\n}\n.input-div:before{\n\tright: 50%;\n}\n.input-div:after{\n\tleft: 50%;\n}\n.input-div.focus:before, .input-div.focus:after{\n\twidth: 50%;\n}\n.input-div.focus > div > h5{\n\ttop: -5px;\n\tfont-size: 15px;\n}\n.input-div.focus > .i > i{\n\tcolor: #38d39f;\n}\n.input-div > div > input{\n\tposition: absolute;\n\tleft: 0;\n\ttop: 0;\n\twidth: 100%;\n\theight: 100%;\n\tborder: none;\n\toutline: none;\n\tbackground: none;\n\tpadding: 0.5rem 0.7rem;\n\tfont-size: 1.2rem;\n\tcolor: #555;\n\tfont-family: 'poppins', sans-serif;\n}\n.input-div.pass{\n\tmargin-bottom: 4px;\n}\na{\n\tdisplay: block;\n\ttext-align: right;\n\ttext-decoration: none;\n\tcolor: #999;\n\tfont-size: 0.9rem;\n\ttransition: .3s;\n}\na:hover{\n\tcolor: #38d39f;\n}\n.btn{\n  display:flex;\n  justify-content: center;\n  align-items: center;\n\twidth: 100%;\n\theight: 50px;\n\tborder-radius: 25px;\n\toutline: none;\n\tborder: none;\n\tbackground-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);\n\tbackground-size: 200%;\n\tfont-size: 1.2rem;\n\tcolor: white;\n\tfont-family: 'Poppins', sans-serif;\n\ttext-transform: uppercase;\n\tmargin: 1rem 0;\n\tcursor: pointer;\n\ttransition: .5s;\n}\n.btn:hover{\n\tbackground-position: right;\n}\n@media screen and (max-width: 1050px){\n.container{\n\t\tgrid-gap: 5rem;\n}\n}\n@media screen and (max-width: 1000px){\nform{\n\t\twidth: 290px;\n}\n.login-content h2{\n        font-size: 2.4rem;\n        margin: 8px 0;\n}\n.img img{\n\t\twidth: 400px;\n}\n}\n@media screen and (max-width: 900px){\n.container{\n\t\tgrid-template-columns: 1fr;\n}\n.img{\n\t\tdisplay: none;\n}\n.wave{\n\t\tdisplay: none;\n}\n.login-content{\n\t\tjustify-content: center;\n}\n}\n.main__action{\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n.btn-register {\n  color: inherit;\n  text-decoration: none;\n}\na:hover {\n  color: inherit !important;\n  text-decoration: none !important;\n}\n.btn-dk {\n  border: none;\n    background: inherit;\n}\n", ""]);
 
 // exports
 
@@ -132,138 +144,57 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _vm._m(0),
+    _c("img", {
+      staticClass: "wave",
+      attrs: { src: __webpack_require__(/*! ../assets/img/login/wave.png */ "./resources/js/components/assets/img/login/wave.png") }
+    }),
     _vm._v(" "),
-    _c("div", { staticClass: "form__component" }, [
-      _vm._m(1),
+    _c("div", { staticClass: "container" }, [
+      _vm._m(0),
       _vm._v(" "),
-      _c("div", { staticClass: "input__box box__space" }, [
-        _c("label", { staticClass: "input__label" }, [
-          _vm._v("\n                Password\n            ")
-        ]),
-        _vm._v(" "),
-        _vm.passwordFieldType === "checkbox"
-          ? _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.password,
-                  expression: "password"
-                }
-              ],
-              staticClass: "input__model",
-              attrs: { type: "checkbox" },
-              domProps: {
-                checked: Array.isArray(_vm.password)
-                  ? _vm._i(_vm.password, null) > -1
-                  : _vm.password
-              },
-              on: {
-                change: function($event) {
-                  var $$a = _vm.password,
-                    $$el = $event.target,
-                    $$c = $$el.checked ? true : false
-                  if (Array.isArray($$a)) {
-                    var $$v = null,
-                      $$i = _vm._i($$a, $$v)
-                    if ($$el.checked) {
-                      $$i < 0 && (_vm.password = $$a.concat([$$v]))
-                    } else {
-                      $$i > -1 &&
-                        (_vm.password = $$a
-                          .slice(0, $$i)
-                          .concat($$a.slice($$i + 1)))
-                    }
-                  } else {
-                    _vm.password = $$c
-                  }
-                }
-              }
-            })
-          : _vm.passwordFieldType === "radio"
-          ? _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.password,
-                  expression: "password"
-                }
-              ],
-              staticClass: "input__model",
-              attrs: { type: "radio" },
-              domProps: { checked: _vm._q(_vm.password, null) },
-              on: {
-                change: function($event) {
-                  _vm.password = null
-                }
-              }
-            })
-          : _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.password,
-                  expression: "password"
-                }
-              ],
-              staticClass: "input__model",
-              attrs: { type: _vm.passwordFieldType },
-              domProps: { value: _vm.password },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.password = $event.target.value
-                }
-              }
-            }),
-        _vm._v(" "),
-        _vm.isEye
-          ? _c(
-              "button",
-              {
-                staticClass: "btn-inhenrt input__icon",
-                on: { click: _vm.switchVisibility }
-              },
-              [
-                _c("i", {
-                  staticClass: "fas fa-eye",
-                  on: {
-                    click: function($event) {
-                      _vm.isEye = !_vm.isEye
-                    }
-                  }
-                })
-              ]
-            )
-          : _c(
-              "button",
-              {
-                staticClass: "btn-inhenrt input__icon",
-                on: { click: _vm.switchVisibility }
-              },
-              [
-                _c("i", {
-                  staticClass: "fas fa-eye-slash",
-                  on: {
-                    click: function($event) {
-                      _vm.isEye = !_vm.isEye
-                    }
-                  }
-                })
-              ]
-            )
-      ]),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _vm._m(3),
-      _vm._v(" "),
-      _vm._m(4)
+      _c("div", { staticClass: "login-content" }, [
+        _c("form", { attrs: { action: "index.html" } }, [
+          _c("img", {
+            attrs: { src: __webpack_require__(/*! ../assets/img/login/avatar.svg */ "./resources/js/components/assets/img/login/avatar.svg") }
+          }),
+          _vm._v(" "),
+          _c("h2", { staticClass: "title" }, [_vm._v("Welcome")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "input-div one" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("div", { staticClass: "div" }, [
+              _c("h5", [_vm._v("Username")]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "input",
+                attrs: { type: "text" },
+                on: { click: _vm.inputFocus }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "input-div pass" }, [
+            _vm._m(2),
+            _vm._v(" "),
+            _c("div", { staticClass: "div" }, [
+              _c("h5", [_vm._v("Password")]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "input",
+                attrs: { type: "password" },
+                on: { click: _vm.inputFocus }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("a", { attrs: { href: "#" } }, [_vm._v("Forgot Password?")]),
+          _vm._v(" "),
+          _vm._m(3),
+          _vm._v(" "),
+          _vm._m(4)
+        ])
+      ])
     ])
   ])
 }
@@ -272,44 +203,34 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "welcome__component" }, [
-      _c("h2", { staticClass: "pt-2" }, [_vm._v("Đăng nhập")])
+    return _c("div", { staticClass: "img" }, [
+      _c("img", { attrs: { src: __webpack_require__(/*! ../assets/img/login/bg.svg */ "./resources/js/components/assets/img/login/bg.svg") } })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input__box box__space" }, [
-      _c("label", { staticClass: "input__label" }, [_vm._v("User name")]),
-      _vm._v(" "),
-      _c("input", { staticClass: "input__model", attrs: { type: "text" } })
+    return _c("div", { staticClass: "i" }, [
+      _c("i", { staticClass: "fas fa-user" })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "sub__action box__space" }, [
-      _c("div", [
-        _c("a", { staticClass: "sub__action__link", attrs: { href: "#" } }, [
-          _vm._v("Quên mật khẩu")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("a", { staticClass: "sub__action__link", attrs: { href: "#" } }, [
-        _vm._v("Lấy lại mật khẩu?")
-      ])
+    return _c("div", { staticClass: "i" }, [
+      _c("i", { staticClass: "fas fa-lock" })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "main__action" }, [
-      _c("button", { staticClass: "login__btn w-50" }, [
-        _c("a", { staticClass: "btn-register", attrs: { href: "/login" } }, [
-          _vm._v("Đăng nhập")
+    return _c("div", { staticClass: "main__action mt-3" }, [
+      _c("button", { staticClass: "btn" }, [
+        _c("a", { staticClass: "btn-register", attrs: { href: "/" } }, [
+          _vm._v("Đăng Nhập")
         ])
       ])
     ])
@@ -318,10 +239,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "main__action" }, [
-      _c("button", { staticClass: "login__btn " }, [
+    return _c("div", { staticClass: "mt-3" }, [
+      _c("button", { staticClass: "btn-dk" }, [
         _c("a", { staticClass: "btn-register", attrs: { href: "/register" } }, [
-          _vm._v("Đăng ký")
+          _vm._v("Bạn chưa có tài khoản? Đăng ký ngay")
         ])
       ])
     ])
@@ -330,6 +251,39 @@ var staticRenderFns = [
 render._withStripped = true
 
 
+
+/***/ }),
+
+/***/ "./resources/js/components/assets/img/login/avatar.svg":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/assets/img/login/avatar.svg ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/avatar.svg?f620e5fdb9a2e0b60d45c119586761e4";
+
+/***/ }),
+
+/***/ "./resources/js/components/assets/img/login/bg.svg":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/assets/img/login/bg.svg ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/bg.svg?374a04af25e7376c1926c16afa34974f";
+
+/***/ }),
+
+/***/ "./resources/js/components/assets/img/login/wave.png":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/assets/img/login/wave.png ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/wave.png?6d252a00c562aee3ae3bab8ed4658f52";
 
 /***/ }),
 

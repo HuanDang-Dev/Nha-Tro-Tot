@@ -22,6 +22,18 @@ export default new Router({
             name: 'register',
             component: () =>
                 import ('./components/login/Registration.vue')
+        },
+        {
+            path: '/viewMotel',
+            name: 'viewMotel',
+            component: () =>
+                import ('./components/motel/ViewMotel.vue')
+        },
+        {
+            path: '/post',
+            name: 'post',
+            component: () =>
+                import ('./components/post/Post.vue')
         }
     ]
 })

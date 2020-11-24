@@ -6875,7 +6875,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\nul li[data-v-59b256ea] {\r\n  list-style: none;\n}\r\n", ""]);
+exports.push([module.i, "\n#app[data-v-59b256ea] {\r\n  \r\n  background-color: #e3e3e3;\n}\nul li[data-v-59b256ea] {\r\n  list-style: none;\n}\r\n", ""]);
 
 // exports
 
@@ -39269,7 +39269,14 @@ var staticRenderFns = [
                 "col-md-5 col-sm-12 ml-4 pl-5 d-flex align-items-center"
             },
             [
-              _c("div", { staticClass: "pr-3 mr-3" }, [
+              _c("div", { staticClass: "btn-edit py-2 px-4" }, [
+                _c("a", { attrs: { href: "/post" } }, [
+                  _c("i", { staticClass: "far fa-edit pr-2" }),
+                  _vm._v("Đăng tin")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "pl-3 ml-3" }, [
                 _c("a", { attrs: { href: "/login" } }, [
                   _c("div", { staticClass: "d-flex align-items-center" }, [
                     _c("i", {
@@ -39278,13 +39285,6 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("h5", { staticClass: "pt-2" }, [_vm._v("Đăng nhập")])
                   ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "btn-edit py-2 px-4" }, [
-                _c("a", { attrs: { href: "" } }, [
-                  _c("i", { staticClass: "far fa-edit pr-2" }),
-                  _vm._v("Đăng tin")
                 ])
               ])
             ]
@@ -55320,6 +55320,18 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     name: 'register',
     component: function component() {
       return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./components/login/Registration.vue */ "./resources/js/components/login/Registration.vue"));
+    }
+  }, {
+    path: '/viewMotel',
+    name: 'viewMotel',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./components/motel/ViewMotel.vue */ "./resources/js/components/motel/ViewMotel.vue"));
+    }
+  }, {
+    path: '/post',
+    name: 'post',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ./components/post/Post.vue */ "./resources/js/components/post/Post.vue"));
     }
   }]
 }));

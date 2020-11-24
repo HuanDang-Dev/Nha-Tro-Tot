@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="viewMotel">
     <NavigationComponent></NavigationComponent>
     <div class="main-body pt-4 text-dark">
       <div class="container">
@@ -36,7 +36,7 @@ import ContactComponent from "../components/ContactComponent.vue";
 import ItemComponent from "../components/ItemComponent.vue";
 
 export default {
-  name: "home",
+  name: "viewMotel",
   components: {
     NavigationComponent,
     FooterComponent,
@@ -46,10 +46,6 @@ export default {
 };
 </script>
 <style scoped>
-#app {
-  
-  background-color: #e3e3e3;
-}
 ul li {
   list-style: none;
 }

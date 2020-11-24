@@ -28,16 +28,16 @@
           </div>
         </div>
         <div class="col-md-5 col-sm-12 ml-4 pl-5 d-flex align-items-center">
-          <div class="pr-3 mr-3">
+          <div class="btn-edit py-2 px-4">
+            <a href="/post"><i class="far fa-edit pr-2"></i>Đăng tin</a>
+          </div>
+          <div class="pl-3 ml-3">
             <a href="/login">
               <div class="d-flex align-items-center">
                 <i class="far fa-user-circle pr-2 btn-icon-big"></i>
                 <h5 class="pt-2">Đăng nhập</h5>
               </div>
             </a>
-          </div>
-          <div class="btn-edit py-2 px-4">
-            <a href=""><i class="far fa-edit pr-2"></i>Đăng tin</a>
           </div>
         </div>
       </div>
