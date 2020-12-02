@@ -36,7 +36,7 @@
                     </textarea>
                     </div>
                     <div class="d-flex px-4 py-3 mb-2">
-                        <button class="login__btn mx-3 w-50"><a class="btn-register" href="/dangtruyen">Đăng Tin</a></button>
+                        <button class="login__btn mx-3 w-50"><a class="btn-register" href="/">Đăng Tin</a></button>
                         <button class="login__btn mx-3 w-50"><a class="btn-register" href="/">Hủy</a></button>
                     </div>
                 </div>

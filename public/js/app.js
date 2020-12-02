@@ -55325,13 +55325,19 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     path: '/viewMotel',
     name: 'viewMotel',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./components/motel/ViewMotel.vue */ "./resources/js/components/motel/ViewMotel.vue"));
+      return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ./components/motel/ViewMotel.vue */ "./resources/js/components/motel/ViewMotel.vue"));
     }
   }, {
     path: '/post',
     name: 'post',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ./components/post/Post.vue */ "./resources/js/components/post/Post.vue"));
+      return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./components/post/Post.vue */ "./resources/js/components/post/Post.vue"));
+    }
+  }, {
+    path: '/admin',
+    name: 'admin',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./components/admin/Admin.vue */ "./resources/js/components/admin/Admin.vue"));
     }
   }]
 }));

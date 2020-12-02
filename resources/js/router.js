@@ -34,6 +34,12 @@ export default new Router({
             name: 'post',
             component: () =>
                 import ('./components/post/Post.vue')
+        },
+        {
+            path: '/admin',
+            name: 'admin',
+            component: () =>
+                import ('./components/admin/Admin.vue')
         }
     ]
 })
