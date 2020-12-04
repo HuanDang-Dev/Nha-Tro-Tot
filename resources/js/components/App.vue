@@ -11,7 +11,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: #e3e3e3;
-  font-size: 14px;
+  background-color: #eeeeee;
+  font-size: 16px;
 }
 </style>

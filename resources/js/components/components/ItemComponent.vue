@@ -1,6 +1,6 @@
 <template>
   <div class="item-component col-md-3 text-left">
-    <a href="" class=" border-primary" >
+    <a href="/viewMotel" class=" border-primary" >
         <div class="item">
             <div>
                 <img class="w-100" src="../assets/img/item/nhatro.jpg" alt="">

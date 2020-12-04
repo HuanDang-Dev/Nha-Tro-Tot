@@ -44,6 +44,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -55,6 +72,48 @@ __webpack_require__.r(__webpack_exports__);
     FooterComponent: _components_FooterComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     ContactComponent: _components_ContactComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
     ItemComponent: _components_ItemComponent_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
+  data: function data() {
+    return {
+      images: ["/images/nhatro1.jpg", "/images/nhatro2.jpg", "/images/nhatro3.jpg"],
+      timer: null,
+      currentIndex: 0,
+      title: "Hoàng Anh Dương",
+      name: "Tuấn Hùng",
+      date: "01/07/2000",
+      status: true,
+      like: 40,
+      rating: 4,
+      giatien: "10Triệu",
+      dientich: "50",
+      des: {
+        vitri: "Cầu giấy",
+        ganTruongDH: "Trường Đại học Công nghệ",
+        csvc: "Có máy nóng lạnh, điều hòa"
+      }
+    };
+  },
+  mounted: function mounted() {
+    this.startSlide();
+  },
+  methods: {
+    startSlide: function startSlide() {
+      this.timer = setInterval(this.next, 4000);
+    },
+    next: function next() {
+      this.currentIndex += 1;
+    },
+    prev: function prev() {
+      this.currentIndex -= 1;
+    },
+    countLike: function countLike() {
+      this.like += 1;
+    }
+  },
+  computed: {
+    currentImg: function currentImg() {
+      return this.images[Math.abs(this.currentIndex) % this.images.length];
+    }
   }
 });
 
@@ -72,7 +131,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\nul li[data-v-00cfccba] {\r\n  list-style: none;\n}\r\n", ""]);
+exports.push([module.i, "\nul li[data-v-00cfccba] {\r\n  list-style: none;\n}\nimg[data-v-00cfccba] {\r\n  height:600px;\r\n  width:100%\n}\n.prev[data-v-00cfccba], .next[data-v-00cfccba] {\r\n  cursor: pointer;\r\n  position: absolute;\r\n  top: 40%;\r\n  width: auto;\r\n  padding: 16px;\r\n  color: white;\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  transition: 0.7s ease;\r\n  border-radius: 0 4px 4px 0;\r\n  text-decoration: none;\r\n  -webkit-user-select: none;\r\n     -moz-user-select: none;\r\n      -ms-user-select: none;\r\n          user-select: none;\n}\n.next[data-v-00cfccba] {\r\n  right: 0;\n}\n.prev[data-v-00cfccba] {\r\n  left: 0;\n}\n.prev[data-v-00cfccba]:hover, .next[data-v-00cfccba]:hover {\r\n  background-color: rgba(0,0,0,0.9);\n}\n.btn-like[data-v-00cfccba] {\r\n    right: 0;\r\n    border: none;\r\n    background-color: initial;\r\n    top: -5px;\n}\n.btn-rating[data-v-00cfccba] {\r\n    right: 40%;\r\n    border: none;\r\n    background-color: initial;\n}\ni[data-v-00cfccba] {\r\n  font-size: 20px;\n}\n.btn-i-like[data-v-00cfccba] {\r\n    font-size: 30px;\n}\nbutton[data-v-00cfccba]:focus{\r\n  outline: none;\n}\r\n", ""]);
 
 // exports
 
@@ -134,24 +193,106 @@ var render = function() {
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "row m-0 p-0  bg-white" }, [
             _c("div", { staticClass: "card-body" }, [
-              _c("h5", { staticClass: "card-title text-left" }, [
-                _vm._v("Cho thuê Bất động sản")
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "position-relative mx-5 w-100" },
+                  [
+                    _vm._l([_vm.currentIndex], function(i) {
+                      return _c("div", { key: i }, [
+                        _c("img", { attrs: { src: _vm.currentImg } })
+                      ])
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "prev",
+                        attrs: { href: "#" },
+                        on: { click: _vm.prev }
+                      },
+                      [_vm._v("❮ ")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "next",
+                        attrs: { href: "#" },
+                        on: { click: _vm.next }
+                      },
+                      [_vm._v("❯ ")]
+                    )
+                  ],
+                  2
+                )
               ]),
               _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "row" },
-                [
-                  _c("ItemComponent"),
+              _c("h3", { staticClass: "card-title text-left ml-5 mt-4" }, [
+                _vm._v(_vm._s(_vm.title))
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: " text-left mx-5 " }, [
+                _c("div", { staticClass: "d-flex position-relative" }, [
+                  _c("h5", { staticClass: "text-danger mr-2" }, [
+                    _vm._v(_vm._s(_vm.giatien) + "  ")
+                  ]),
                   _vm._v(" "),
-                  _c("ItemComponent"),
+                  _c("span", [_vm._v(" - ")]),
                   _vm._v(" "),
-                  _c("ItemComponent"),
+                  _c("h5", { staticClass: "ml-2" }, [
+                    _vm._v("  " + _vm._s(_vm.dientich) + "m"),
+                    _c("sup", [_vm._v("2")])
+                  ]),
                   _vm._v(" "),
-                  _c("ItemComponent")
-                ],
-                1
-              )
+                  _c(
+                    "div",
+                    { staticClass: "position-absolute btn-rating" },
+                    [
+                      _vm._v("Rating: "),
+                      _vm._l(_vm.rating, function(item) {
+                        return _c("span", { key: item.id }, [
+                          _c("i", { staticClass: "fas fa-star text-warning" })
+                        ])
+                      })
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "position-absolute btn-like text-primary",
+                      on: {
+                        click: function($event) {
+                          return _vm.countLike()
+                        }
+                      }
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "far fa-thumbs-up text-primary btn-i-like"
+                      }),
+                      _vm._v(_vm._s(_vm.like))
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("p", [_vm._v("Vị trí địa lý: " + _vm._s(_vm.des.vitri))]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Nhà trọ gần trường đại học: " +
+                        _vm._s(_vm.des.ganTruongDH)
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v("Điều kiện cơ sở vật chất: " + _vm._s(_vm.des.csvc))
+                  ])
+                ])
+              ])
             ])
           ])
         ])

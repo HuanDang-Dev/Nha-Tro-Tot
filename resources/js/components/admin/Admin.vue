@@ -1,12 +1,12 @@
 <template>
   <div class="admin">
-      <div class="navbar-side px-2">
+    <div class="navbar-side px-2">
         <h2 class="pl-3">ADMIN</h2>
 
         <div class="nav-no-collapse header-nav">
             <ul class="nav pull-right">
                 <li class="dropdown p-2">
-                    <button class="btn-admin dropdown-toggle ml-3 p-2" data-toggle="dropdown" href="#">
+                    <button class="btn-admin dropdown-toggle ml-3 p-2 text-font" data-toggle="dropdown" href="#">
                         Huan Dang
                         <span class="caret"></span>
                     </button>
@@ -63,9 +63,9 @@
                                             <a class="btn btn-info py-1 pl-2 pr-1 my-1" :href="owner.linkEdit">
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            <a class="btn btn-danger py-1 px-2 my-1" href="#">
+                                            <button class="btn btn-danger py-1 px-2 my-1" href="#" v-on:click="removeElement(i)">
                                                 <i class="fas fa-trash-alt"></i>
-                                            </a>
+                                            </button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -97,7 +97,7 @@ export default {
                   name: "Tuấn Hùng",
                   date: "01/07/2000",
                   status: true,
-                  like: "40",
+                  like: 40,
                   rating: 4,
                   linkZoomIn: "/",
                   linkEdit: "/"
@@ -107,7 +107,7 @@ export default {
                   name: "Tuấn Hùng",
                   date: "01/07/2000",
                   status: false,
-                  like: "50",
+                  like: 50,
                   rating: 4,
                   linkZoomIn: "/",
                   linkEdit: "/"
@@ -117,7 +117,7 @@ export default {
                   name: "Tuấn Hùng",
                   date: "01/07/2000",
                   status: true,
-                  like: "50",
+                  like: 50,
                   rating: 5,
                   linkZoomIn: "/",
                   linkEdit: "/"
@@ -127,7 +127,7 @@ export default {
                   name: "Tuấn Hùng",
                   date: "01/07/2000",
                   status: false,
-                  like: "50",
+                  like: 50,
                   rating: 5,
                   linkZoomIn: "/",
                   linkEdit: "/"
@@ -136,7 +136,9 @@ export default {
         }
     },
     methods: {
-      
+        removeElement: function (index) {
+            this.$delete(this.owners, index)
+        }
     }
 }
 </script>
@@ -145,6 +147,7 @@ export default {
 #app {
     background-color: initial;
     text-align: left;
+    font-size: 16px;
 }
 .navbar-side {
     display: flex;
@@ -247,5 +250,8 @@ export default {
 .btn-admin:hover {
     color: #212529;
     text-decoration: none;
+}
+.text-font {
+    font-size: 20px;
 }
 </style>

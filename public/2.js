@@ -106,7 +106,7 @@ __webpack_require__.r(__webpack_exports__);
         name: "Tuấn Hùng",
         date: "01/07/2000",
         status: true,
-        like: "40",
+        like: 40,
         rating: 4,
         linkZoomIn: "/",
         linkEdit: "/"
@@ -115,7 +115,7 @@ __webpack_require__.r(__webpack_exports__);
         name: "Tuấn Hùng",
         date: "01/07/2000",
         status: false,
-        like: "50",
+        like: 50,
         rating: 4,
         linkZoomIn: "/",
         linkEdit: "/"
@@ -124,7 +124,7 @@ __webpack_require__.r(__webpack_exports__);
         name: "Tuấn Hùng",
         date: "01/07/2000",
         status: true,
-        like: "50",
+        like: 50,
         rating: 5,
         linkZoomIn: "/",
         linkEdit: "/"
@@ -133,14 +133,18 @@ __webpack_require__.r(__webpack_exports__);
         name: "Tuấn Hùng",
         date: "01/07/2000",
         status: false,
-        like: "50",
+        like: 50,
         rating: 5,
         linkZoomIn: "/",
         linkEdit: "/"
       }]
     };
   },
-  methods: {}
+  methods: {
+    removeElement: function removeElement(index) {
+      this.$delete(this.owners, index);
+    }
+  }
 });
 
 /***/ }),
@@ -157,7 +161,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#app {\r\n    background-color: initial;\r\n    text-align: left;\n}\n.navbar-side {\r\n    display: flex;\r\n    position: relative;\r\n    flex-wrap: wrap;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    background-color: #e3e3e3;\r\n    padding: .5rem 1rem;\n}\n.nav.pull-right {\r\n    float: right;\r\n    margin-right: 0;\n}\n.box {\r\n    border: 2px solid #578EBE;\r\n    background: #fff !important;\r\n    margin-bottom: 28px;\n}\n.box-header {\r\n    line-height: 16px;\r\n    padding: 10px;\r\n    background: #578EBE;\r\n    box-shadow: none;\r\n    overflow: hidden;\n}\n.dropdown-menu {\r\n    border-top: 5px solid transparent;\r\n    border-radius: 2px !important;\r\n    position: absolute;\r\n    top: 100%;\r\n    left: -10px !important;\r\n    z-index: 1000;\r\n    display: none;\r\n    float: left;\r\n    min-width: 160px;\r\n    max-width: 300px;\r\n    padding: 0px 0;\r\n    margin: 0px 0 0 0;\r\n    list-style: none;\r\n    text-shadow: none;\r\n    -webkit-border-radius: 2px;\r\n    -moz-border-radius: 2px;\r\n    box-shadow: none;\n}\n.dropdown-menu:before {\r\n    position: absolute;\r\n    top: -7px;\r\n    left: 9px;\r\n    display: inline-block;\r\n    border-right: 7px solid transparent;\r\n    border-bottom: 7px solid #ccc;\r\n    border-left: 7px solid transparent;\r\n    border-bottom-color: #313131;\r\n    content: '';\r\n    right: 15px;\r\n    left: auto;\n}\n.dropdown-menu-title {\r\n    background: rgb(49, 49, 49);\r\n    color: #fff;\r\n    padding: 8px 0px;\r\n    position: relative;\n}\n.label, .badge {\r\n    text-shadow: none;\r\n    font-family: 'Open Sans', sans-serif;\r\n    font-weight: 600;\r\n    font-size: 12px;\r\n    padding: 3px 6px;\r\n    width: auto;\n}\n.label-success{\r\n    background: #43B5AD !important;\r\n    border-color: #43B5AD !important;\r\n    color: #fff;\n}\n.label-important{\r\n    background: #E25A59 !important;\r\n    border-color: #E25A59 !important;\r\n    color: #fff;\n}\n.btn-admin {\r\n    border: none;\r\n    background-color: initial;\r\n    font-size: 16px;\n}\n.btn-admin:not(:disabled):not(.disabled) {\r\n    cursor: pointer;\n}\n.btn-admin.focus, .btn-admin:focus {\r\n    outline: 0;\n}\n.btn-admin:hover {\r\n    color: #212529;\r\n    text-decoration: none;\n}\r\n", ""]);
+exports.push([module.i, "\n#app {\r\n    background-color: initial;\r\n    text-align: left;\r\n    font-size: 16px;\n}\n.navbar-side {\r\n    display: flex;\r\n    position: relative;\r\n    flex-wrap: wrap;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    background-color: #e3e3e3;\r\n    padding: .5rem 1rem;\n}\n.nav.pull-right {\r\n    float: right;\r\n    margin-right: 0;\n}\n.box {\r\n    border: 2px solid #578EBE;\r\n    background: #fff !important;\r\n    margin-bottom: 28px;\n}\n.box-header {\r\n    line-height: 16px;\r\n    padding: 10px;\r\n    background: #578EBE;\r\n    box-shadow: none;\r\n    overflow: hidden;\n}\n.dropdown-menu {\r\n    border-top: 5px solid transparent;\r\n    border-radius: 2px !important;\r\n    position: absolute;\r\n    top: 100%;\r\n    left: -10px !important;\r\n    z-index: 1000;\r\n    display: none;\r\n    float: left;\r\n    min-width: 160px;\r\n    max-width: 300px;\r\n    padding: 0px 0;\r\n    margin: 0px 0 0 0;\r\n    list-style: none;\r\n    text-shadow: none;\r\n    -webkit-border-radius: 2px;\r\n    -moz-border-radius: 2px;\r\n    box-shadow: none;\n}\n.dropdown-menu:before {\r\n    position: absolute;\r\n    top: -7px;\r\n    left: 9px;\r\n    display: inline-block;\r\n    border-right: 7px solid transparent;\r\n    border-bottom: 7px solid #ccc;\r\n    border-left: 7px solid transparent;\r\n    border-bottom-color: #313131;\r\n    content: '';\r\n    right: 15px;\r\n    left: auto;\n}\n.dropdown-menu-title {\r\n    background: rgb(49, 49, 49);\r\n    color: #fff;\r\n    padding: 8px 0px;\r\n    position: relative;\n}\n.label, .badge {\r\n    text-shadow: none;\r\n    font-family: 'Open Sans', sans-serif;\r\n    font-weight: 600;\r\n    font-size: 12px;\r\n    padding: 3px 6px;\r\n    width: auto;\n}\n.label-success{\r\n    background: #43B5AD !important;\r\n    border-color: #43B5AD !important;\r\n    color: #fff;\n}\n.label-important{\r\n    background: #E25A59 !important;\r\n    border-color: #E25A59 !important;\r\n    color: #fff;\n}\n.btn-admin {\r\n    border: none;\r\n    background-color: initial;\r\n    font-size: 16px;\n}\n.btn-admin:not(:disabled):not(.disabled) {\r\n    cursor: pointer;\n}\n.btn-admin.focus, .btn-admin:focus {\r\n    outline: 0;\n}\n.btn-admin:hover {\r\n    color: #212529;\r\n    text-decoration: none;\n}\n.text-font {\r\n    font-size: 20px;\n}\r\n", ""]);
 
 // exports
 
@@ -336,7 +340,19 @@ var render = function() {
                               [_c("i", { staticClass: "fas fa-edit" })]
                             ),
                             _vm._v(" "),
-                            _vm._m(3, true)
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger py-1 px-2 my-1",
+                                attrs: { href: "#" },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.removeElement(i)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fas fa-trash-alt" })]
+                            )
                           ])
                         ])
                       ])
@@ -353,7 +369,7 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "clearfix" }),
     _vm._v(" "),
-    _vm._m(4)
+    _vm._m(3)
   ])
 }
 var staticRenderFns = [
@@ -370,7 +386,7 @@ var staticRenderFns = [
             _c(
               "button",
               {
-                staticClass: "btn-admin dropdown-toggle ml-3 p-2",
+                staticClass: "btn-admin dropdown-toggle ml-3 p-2 text-font",
                 attrs: { "data-toggle": "dropdown", href: "#" }
               },
               [
@@ -437,16 +453,6 @@ var staticRenderFns = [
         _c("th", [_vm._v("Chỉnh sửa")])
       ])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      { staticClass: "btn btn-danger py-1 px-2 my-1", attrs: { href: "#" } },
-      [_c("i", { staticClass: "fas fa-trash-alt" })]
-    )
   },
   function() {
     var _vm = this

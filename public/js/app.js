@@ -6780,7 +6780,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#app {\r\n  font-family: 'Roboto', sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  text-align: center;\r\n  color: #2c3e50;\r\n  background-color: #e3e3e3;\r\n  font-size: 14px;\n}\r\n", ""]);
+exports.push([module.i, "\n#app {\r\n  font-family: 'Roboto', sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  text-align: center;\r\n  color: #2c3e50;\r\n  background-color: #eeeeee;\r\n  font-size: 16px;\n}\r\n", ""]);
 
 // exports
 
@@ -6818,7 +6818,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.list-nostyle[data-v-129e42d8] {\r\n  list-style: none;\n}\na[data-v-129e42d8] {\r\n  text-decoration: none;\r\n  color: inherit;\n}\n.border-top[data-v-129e42d8]{\r\n  border-top: 2px solid #c3c3c3 !important;\n}\r\n", ""]);
+exports.push([module.i, "\n.footer-component[data-v-129e42d8] {\r\n  border-top: 2px solid #c3c3c3;\n}\n.list-nostyle[data-v-129e42d8] {\r\n  list-style: none;\n}\na[data-v-129e42d8] {\r\n  text-decoration: none;\r\n  color: inherit;\n}\n.border-top[data-v-129e42d8]{\r\n  border-top: 2px solid #c3c3c3 !important;\n}\r\n", ""]);
 
 // exports
 
@@ -38997,123 +38997,133 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "footer-component text-black py-2 pt-4" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row m-0 p-0 text-left" }, [
-          _c(
-            "div",
-            { staticClass: "col-md-8 col-sm-12 m-0 px-5 d-flex flex-column" },
-            [
-              _c("h4", [_vm._v("Chúng tôi")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Với hệ thống căn hộ tiện ích đạt chuẩn, Nhà Trọ Tốt chú trọng xây dựng tính cộng đồng và phát triển đời sống xã hội cho thế hệ trẻ dựa trên sức mạnh của công nghệ."
-                )
-              ]),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c("p", [_vm._v("CÔNG TY TNHH NHÀ TRỌ TỐT - Địa chỉ: Hà Nội ")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Email: trogiup@chotot.vn - Đường dây nóng: (028)123456789"
-                )
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-4 col-sm-6 m-0 p-1" }, [
-            _c("ul", { staticClass: "text-left list-nostyle" }, [
-              _c("li", { staticClass: "my-2" }, [_vm._v("HỖ TRỢ KHÁCH HÀNG")]),
-              _vm._v(" "),
-              _c("li", { staticClass: "my-1" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _vm._v("Trung tâm trợ giúp")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "my-1" }, [
-                _c("a", { attrs: { href: "#" } }, [_vm._v("An toàn mua bán")])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "my-1" }, [
-                _c("a", { attrs: { href: "#" } }, [_vm._v("Quy định cần biết")])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "my-1" }, [
-                _c("a", { attrs: { href: "#" } }, [_vm._v("Liên hệ hỗ trợ")])
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row m-0 p-0 pt-4 border-top text-left" }, [
-          _c("div", { staticClass: "col-md-6 col-sm-4 px-5" }, [
-            _c("h5", [_vm._v("Liên hệ")]),
-            _vm._v(" "),
+    return _c(
+      "div",
+      { staticClass: "footer-component text-black py-2 pt-4 mx-5" },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row m-0 p-0 text-left" }, [
             _c(
               "div",
-              { staticClass: "text-left list-nostyle d-flex flex-row" },
+              { staticClass: "col-md-8 col-sm-12 m-0 px-5 d-flex flex-column" },
               [
-                _c("div", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("img", {
-                      staticClass: "w-50",
-                      attrs: {
-                        src: __webpack_require__(/*! ../assets/img/social/facebook.png */ "./resources/js/components/assets/img/social/facebook.png"),
-                        alt: ""
-                      }
-                    })
-                  ])
+                _c("h4", [_vm._v("Chúng tôi")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Với hệ thống căn hộ tiện ích đạt chuẩn, Nhà Trọ Tốt chú trọng xây dựng tính cộng đồng và phát triển đời sống xã hội cho thế hệ trẻ dựa trên sức mạnh của công nghệ."
+                  )
                 ]),
                 _vm._v(" "),
-                _c("div", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("img", {
-                      staticClass: "w-50",
-                      attrs: {
-                        src: __webpack_require__(/*! ../assets/img/social/google.png */ "./resources/js/components/assets/img/social/google.png"),
-                        alt: ""
-                      }
-                    })
-                  ])
+                _c("br"),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v("CÔNG TY TNHH NHÀ TRỌ TỐT - Địa chỉ: Hà Nội ")
                 ]),
                 _vm._v(" "),
-                _c("div", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("img", {
-                      staticClass: "w-50",
-                      attrs: {
-                        src: __webpack_require__(/*! ../assets/img/social/skype.png */ "./resources/js/components/assets/img/social/skype.png"),
-                        alt: ""
-                      }
-                    })
-                  ])
+                _c("p", [
+                  _vm._v(
+                    "Email: trogiup@chotot.vn - Đường dây nóng: (028)123456789"
+                  )
                 ])
               ]
-            )
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-4 col-sm-6 m-0 p-1" }, [
+              _c("ul", { staticClass: "text-left list-nostyle" }, [
+                _c("li", { staticClass: "my-2" }, [
+                  _vm._v("HỖ TRỢ KHÁCH HÀNG")
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "my-1" }, [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _vm._v("Trung tâm trợ giúp")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "my-1" }, [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("An toàn mua bán")])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "my-1" }, [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _vm._v("Quy định cần biết")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "my-1" }, [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Liên hệ hỗ trợ")])
+                ])
+              ])
+            ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 col-sm-4 px-5" }, [
-            _c("h5", [_vm._v("Chứng nhận")]),
+          _c("div", { staticClass: "row m-0 p-0 pt-4 border-top text-left" }, [
+            _c("div", { staticClass: "col-md-6 col-sm-4 px-5" }, [
+              _c("h5", [_vm._v("Liên hệ")]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "text-left list-nostyle d-flex flex-row" },
+                [
+                  _c("div", [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "w-50",
+                        attrs: {
+                          src: __webpack_require__(/*! ../assets/img/social/facebook.png */ "./resources/js/components/assets/img/social/facebook.png"),
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "w-50",
+                        attrs: {
+                          src: __webpack_require__(/*! ../assets/img/social/google.png */ "./resources/js/components/assets/img/social/google.png"),
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "w-50",
+                        attrs: {
+                          src: __webpack_require__(/*! ../assets/img/social/skype.png */ "./resources/js/components/assets/img/social/skype.png"),
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]
+              )
+            ]),
             _vm._v(" "),
-            _c("div", { staticClass: "text-left d-flex flex-row py-2" }, [
-              _c("div", { staticClass: "mt-1 ml-1" }, [
-                _c("img", {
-                  staticClass: "w-100",
-                  attrs: {
-                    src: __webpack_require__(/*! ../assets/img/cerfiticate.png */ "./resources/js/components/assets/img/cerfiticate.png"),
-                    alt: ""
-                  }
-                })
+            _c("div", { staticClass: "col-md-6 col-sm-4 px-5" }, [
+              _c("h5", [_vm._v("Chứng nhận")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "text-left d-flex flex-row py-2" }, [
+                _c("div", { staticClass: "mt-1 ml-1" }, [
+                  _c("img", {
+                    staticClass: "w-100",
+                    attrs: {
+                      src: __webpack_require__(/*! ../assets/img/cerfiticate.png */ "./resources/js/components/assets/img/cerfiticate.png"),
+                      alt: ""
+                    }
+                  })
+                ])
               ])
             ])
           ])
         ])
-      ])
-    ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -39145,33 +39155,40 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "item-component col-md-3 text-left" }, [
-      _c("a", { staticClass: " border-primary", attrs: { href: "" } }, [
-        _c("div", { staticClass: "item" }, [
-          _c("div", [
-            _c("img", {
-              staticClass: "w-100",
-              attrs: { src: __webpack_require__(/*! ../assets/img/item/nhatro.jpg */ "./resources/js/components/assets/img/item/nhatro.jpg"), alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "my-2 ml-2" }, [
-            _c("h4", { staticClass: "m-0" }, [_vm._v("Căn hộ Cầu Giấy")]),
-            _vm._v(" "),
-            _c("small", { staticClass: "text-muted m-0" }, [
-              _vm._v("30 m² - 1 PN")
+      _c(
+        "a",
+        { staticClass: " border-primary", attrs: { href: "/viewMotel" } },
+        [
+          _c("div", { staticClass: "item" }, [
+            _c("div", [
+              _c("img", {
+                staticClass: "w-100",
+                attrs: {
+                  src: __webpack_require__(/*! ../assets/img/item/nhatro.jpg */ "./resources/js/components/assets/img/item/nhatro.jpg"),
+                  alt: ""
+                }
+              })
             ]),
             _vm._v(" "),
-            _c("h3", { staticClass: "text-danger my-1" }, [
-              _vm._v("3 triệu/tháng ")
-            ]),
-            _vm._v(" "),
-            _c("small", { staticClass: "text-muted" }, [
-              _c("i", { staticClass: "fas fa-angle-right pr-1" }),
-              _vm._v(" Có điều hòa, máy nóng lạnh")
+            _c("div", { staticClass: "my-2 ml-2" }, [
+              _c("h4", { staticClass: "m-0" }, [_vm._v("Căn hộ Cầu Giấy")]),
+              _vm._v(" "),
+              _c("small", { staticClass: "text-muted m-0" }, [
+                _vm._v("30 m² - 1 PN")
+              ]),
+              _vm._v(" "),
+              _c("h3", { staticClass: "text-danger my-1" }, [
+                _vm._v("3 triệu/tháng ")
+              ]),
+              _vm._v(" "),
+              _c("small", { staticClass: "text-muted" }, [
+                _c("i", { staticClass: "fas fa-angle-right pr-1" }),
+                _vm._v(" Có điều hòa, máy nóng lạnh")
+              ])
             ])
           ])
-        ])
-      ])
+        ]
+      )
     ])
   }
 ]
@@ -55362,8 +55379,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\5.Huan\Nam3\Phát triển web\btl\Nha-Tro-Tot\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\5.Huan\Nam3\Phát triển web\btl\Nha-Tro-Tot\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\5.Huan\Nam3\Web\btl\Nha-Tro-Tot\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\5.Huan\Nam3\Web\btl\Nha-Tro-Tot\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

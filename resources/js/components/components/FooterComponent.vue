@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-component text-black py-2 pt-4">
+  <div class="footer-component text-black py-2 pt-4 mx-5">
     <div class="container">
       <div class="row m-0 p-0 text-left">
         <div class="col-md-8 col-sm-12 m-0 px-5 d-flex flex-column">
@@ -46,6 +46,9 @@ export default {
 </script>
 
 <style scoped>
+.footer-component {
+  border-top: 2px solid #c3c3c3;
+}
 .list-nostyle {
   list-style: none;
 }
