@@ -97,10 +97,80 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "admin",
   data: function data() {
     return {
+      admin: [{
+        title: "Hoàng Anh Dương",
+        name: "Tuấn Hùng",
+        date: "01/07/2000",
+        status: true,
+        like: 50,
+        rating: 5,
+        linkZoomIn: "/"
+      }, {
+        title: "Hoàng Anh Dương",
+        name: "Tuấn Hùng",
+        date: "01/07/2000",
+        status: false,
+        like: 50,
+        rating: 5,
+        linkZoomIn: "/"
+      }],
       owners: [{
         title: "Hoàng Anh Dương",
         name: "Tuấn Hùng",
@@ -141,8 +211,11 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    removeElement: function removeElement(index) {
+    removeElementOwner: function removeElementOwner(index) {
       this.$delete(this.owners, index);
+    },
+    removeElementAdmin: function removeElementAdmin(index) {
+      this.$delete(this.admin, index);
     }
   }
 });
@@ -216,7 +289,7 @@ var render = function() {
   return _c("div", { staticClass: "admin" }, [
     _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "container-fluid-full p-3" }, [
+    _c("div", { staticClass: "container-fluid-full px-3 pt-3" }, [
       _c("div", { staticClass: "row-fluid" }, [
         _c("div", { staticClass: "span10", attrs: { id: "content" } }, [
           _c("div", { staticClass: "row-fluid sortable" }, [
@@ -232,6 +305,157 @@ var render = function() {
                   },
                   [
                     _vm._m(2),
+                    _vm._v(" "),
+                    _vm._l(_vm.admin, function(ad, i) {
+                      return _c("tbody", { key: i }, [
+                        _c("tr", [
+                          _c("td", [_vm._v(_vm._s(ad.title))]),
+                          _vm._v(" "),
+                          _c("td", { staticClass: "center" }, [
+                            _vm._v(_vm._s(ad.date))
+                          ]),
+                          _vm._v(" "),
+                          _c("td", { staticClass: "center" }, [
+                            _vm._v(_vm._s(ad.name))
+                          ]),
+                          _vm._v(" "),
+                          _c("td", { staticClass: "center" }, [
+                            ad.status
+                              ? _c(
+                                  "div",
+                                  { staticClass: " d-flex flex-wrap w-auto" },
+                                  [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "label label-success m-1"
+                                      },
+                                      [_vm._v("Like: " + _vm._s(ad.like))]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "label label-success m-1"
+                                      },
+                                      [
+                                        _vm._v("Rating: "),
+                                        _vm._l(ad.rating, function(item) {
+                                          return _c("span", { key: item.id }, [
+                                            _c("i", {
+                                              staticClass: "fas fa-star"
+                                            })
+                                          ])
+                                        })
+                                      ],
+                                      2
+                                    )
+                                  ]
+                                )
+                              : _c(
+                                  "div",
+                                  { staticClass: " d-flex flex-wrap w-auto" },
+                                  [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "label label-important  m-1"
+                                      },
+                                      [_vm._v("Like: " + _vm._s(ad.like))]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "label label-important m-1"
+                                      },
+                                      [
+                                        _vm._v("Rating: "),
+                                        _vm._l(ad.rating, function(item) {
+                                          return _c("span", { key: item.id }, [
+                                            _c("i", {
+                                              staticClass: "fas fa-star"
+                                            })
+                                          ])
+                                        })
+                                      ],
+                                      2
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "label label-important m-1"
+                                      },
+                                      [_vm._v("Đã thuê")]
+                                    )
+                                  ]
+                                )
+                          ]),
+                          _vm._v(" "),
+                          _c("td", { staticClass: "center" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "btn btn-success py-1 px-2 my-1",
+                                attrs: { href: ad.linkZoomIn }
+                              },
+                              [_c("i", { staticClass: "fas fa-search-plus" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "btn btn-info py-1 pl-2 pr-1 my-1",
+                                attrs: { href: ad.linkEdit }
+                              },
+                              [_c("i", { staticClass: "fas fa-edit" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger py-1 px-2 my-1",
+                                attrs: { href: "#" },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.removeElementAdmin(i)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fas fa-trash-alt" })]
+                            )
+                          ])
+                        ])
+                      ])
+                    })
+                  ],
+                  2
+                )
+              ])
+            ])
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container-fluid-full px-3" }, [
+      _c("div", { staticClass: "row-fluid" }, [
+        _c("div", { staticClass: "span10", attrs: { id: "content" } }, [
+          _c("div", { staticClass: "row-fluid sortable" }, [
+            _c("div", { staticClass: "box span12" }, [
+              _vm._m(3),
+              _vm._v(" "),
+              _c("div", { staticClass: "box-content" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass:
+                      "table table-striped table-bordered bootstrap-datatable datatable"
+                  },
+                  [
+                    _vm._m(4),
                     _vm._v(" "),
                     _vm._l(_vm.owners, function(owner, i) {
                       return _c("tbody", { key: i }, [
@@ -332,22 +556,13 @@ var render = function() {
                             ),
                             _vm._v(" "),
                             _c(
-                              "a",
-                              {
-                                staticClass: "btn btn-info py-1 pl-2 pr-1 my-1",
-                                attrs: { href: owner.linkEdit }
-                              },
-                              [_c("i", { staticClass: "fas fa-edit" })]
-                            ),
-                            _vm._v(" "),
-                            _c(
                               "button",
                               {
                                 staticClass: "btn btn-danger py-1 px-2 my-1",
                                 attrs: { href: "#" },
                                 on: {
                                   click: function($event) {
-                                    return _vm.removeElement(i)
+                                    return _vm.removeElementOwner(i)
                                   }
                                 }
                               },
@@ -369,7 +584,7 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "clearfix" }),
     _vm._v(" "),
-    _vm._m(3)
+    _vm._m(5)
   ])
 }
 var staticRenderFns = [
@@ -432,6 +647,40 @@ var staticRenderFns = [
           _c("i", { staticClass: "halflings-icon white user" }),
           _c("span", { staticClass: "break" }),
           _vm._v("Bài đăng")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Tên bài đăng")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Ngày đăng")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Chủ trọ")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Trạng thái")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Chỉnh sửa")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "box-header", attrs: { "data-original-title": "" } },
+      [
+        _c("h4", [
+          _c("i", { staticClass: "halflings-icon white user" }),
+          _c("span", { staticClass: "break" }),
+          _vm._v("Bài quản lý")
         ])
       ]
     )

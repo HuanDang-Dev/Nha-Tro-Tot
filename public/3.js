@@ -12,7 +12,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_NavigationComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/NavigationComponent.vue */ "./resources/js/components/components/NavigationComponent.vue");
 /* harmony import */ var _components_FooterComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/FooterComponent.vue */ "./resources/js/components/components/FooterComponent.vue");
 /* harmony import */ var _components_ContactComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ContactComponent.vue */ "./resources/js/components/components/ContactComponent.vue");
-/* harmony import */ var _components_ItemComponent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ItemComponent.vue */ "./resources/js/components/components/ItemComponent.vue");
 //
 //
 //
@@ -61,7 +60,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 
 
@@ -70,8 +68,7 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     NavigationComponent: _components_NavigationComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     FooterComponent: _components_FooterComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    ContactComponent: _components_ContactComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    ItemComponent: _components_ItemComponent_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    ContactComponent: _components_ContactComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {

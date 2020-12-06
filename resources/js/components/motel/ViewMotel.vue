@@ -50,15 +50,13 @@
 import NavigationComponent from "../components/NavigationComponent.vue";
 import FooterComponent from "../components/FooterComponent.vue";
 import ContactComponent from "../components/ContactComponent.vue";
-import ItemComponent from "../components/ItemComponent.vue";
 
 export default {
   name: "viewMotel",
   components: {
     NavigationComponent,
     FooterComponent,
-    ContactComponent,
-    ItemComponent
+    ContactComponent
   },
   data() {
     return {

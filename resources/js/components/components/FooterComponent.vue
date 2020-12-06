@@ -13,9 +13,7 @@
           <ul class="text-left list-nostyle">
               <li class="my-2">HỖ TRỢ KHÁCH HÀNG</li>
               <li class="my-1"><a href="#">Trung tâm trợ giúp</a></li>
-              <li class="my-1"><a href="#">An toàn mua bán</a></li>
-              <li class="my-1"><a href="#">Quy định cần biết</a></li>
-              <li class="my-1"><a href="#">Liên hệ hỗ trợ</a></li>
+              <li class="my-1"><a href="/rule">Quy định cần biết</a></li>
           </ul>
         </div>
       </div>

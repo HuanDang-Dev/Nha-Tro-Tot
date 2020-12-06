@@ -7,10 +7,10 @@
         </div>
         <div class="col-md-7 col-sm-12 py-3 d-flex">
           <div class="px-4">
-            <a href="" class="btn-icon"><i class="fas fa-home pr-2"></i>Home </a>
+            <a href="/" class="btn-icon"><i class="fas fa-home pr-2"></i>Home </a>
           </div>
           <div class="px-4">
-            <a href="" class="btn-icon"><i class="far fa-user pr-2"></i>Tôi bán </a>
+            <a href="/owner" class="btn-icon"><i class="far fa-user pr-2"></i>Tôi bán </a>
           </div>
           <div class="px-4">
             <a href="" class="btn-icon"><i class="far fa-comments pr-2"></i>Chat </a>

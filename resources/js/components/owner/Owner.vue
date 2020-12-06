@@ -1,7 +1,7 @@
 <template>
   <div class="admin">
     <div class="navbar-side px-2">
-        <h2 class="pl-3">ADMIN</h2>
+        <h2 class="pl-3">Chủ cho thuê nhà trọ</h2>
 
         <div class="nav-no-collapse header-nav">
             <ul class="nav pull-right">
@@ -20,7 +20,6 @@
             </ul>
         </div>
     </div>
-
     <div class="container-fluid-full px-3 pt-3">
         <div class="row-fluid">
             <div id="content" class="span10">
@@ -28,62 +27,6 @@
                     <div class="box span12">
                         <div class="box-header" data-original-title>
                             <h4><i class="halflings-icon white user"></i><span class="break"></span>Bài đăng</h4>
-                        </div>
-                        <div class="box-content">
-                            <table class="table table-striped table-bordered bootstrap-datatable datatable">
-                                <thead>
-                                    <tr>
-                                        <th>Tên bài đăng</th>
-                                        <th>Ngày đăng</th>
-                                        <th>Chủ trọ</th>
-                                        <th>Trạng thái</th>
-                                        <th>Chỉnh sửa</th>
-                                    </tr>
-                                </thead>
-                                <tbody v-for="(ad, i) in admin" :key="i">
-                                    <tr>
-                                        <td>{{ad.title}}</td>
-                                        <td class="center">{{ad.date}}</td>
-                                        <td class="center">{{ad.name}}</td>
-                                        <td class="center">
-                                            <div class=" d-flex flex-wrap w-auto" v-if="ad.status">
-                                                <div class="label label-success m-1">Like: {{ad.like}}</div>
-                                                <div class="label label-success m-1">Rating: <span v-for="item in ad.rating" :key="item.id"><i class="fas fa-star"></i></span></div>
-                                            </div>
-                                            <div class=" d-flex flex-wrap w-auto" v-else>
-                                                <div class="label label-important  m-1">Like: {{ad.like}}</div>
-                                                <div class="label label-important m-1">Rating: <span v-for="item in ad.rating" :key="item.id"><i class="fas fa-star"></i></span></div>
-                                                <div class="label label-important m-1">Đã thuê</div>
-                                            </div>
-                                        </td>
-                                        <td class="center">
-                                            <a class="btn btn-success py-1 px-2 my-1" :href="ad.linkZoomIn">
-                                                <i class="fas fa-search-plus"></i>
-                                            </a>
-                                            <a class="btn btn-info py-1 pl-2 pr-1 my-1" :href="ad.linkEdit">
-                                                <i class="fas fa-edit"></i>
-                                            </a>
-                                            <button class="btn btn-danger py-1 px-2 my-1" href="#" v-on:click="removeElementAdmin(i)">
-                                                <i class="fas fa-trash-alt"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid-full px-3">
-        <div class="row-fluid">
-            <div id="content" class="span10">
-                <div class="row-fluid sortable">
-                    <div class="box span12">
-                        <div class="box-header" data-original-title>
-                            <h4><i class="halflings-icon white user"></i><span class="break"></span>Bài quản lý</h4>
                         </div>
                         <div class="box-content">
                             <table class="table table-striped table-bordered bootstrap-datatable datatable">
@@ -116,6 +59,9 @@
                                             <a class="btn btn-success py-1 px-2 my-1" :href="owner.linkZoomIn">
                                                 <i class="fas fa-search-plus"></i>
                                             </a>
+                                            <a class="btn btn-info py-1 pl-2 pr-1 my-1" :href="owner.linkEdit">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
                                             <button class="btn btn-danger py-1 px-2 my-1" href="#" v-on:click="removeElementOwner(i)">
                                                 <i class="fas fa-trash-alt"></i>
                                             </button>
@@ -141,29 +87,9 @@
 
 <script>
 export default {
-    name: "admin",
+    name: "owner",
     data() {
         return {
-            admin: [
-              {    
-                  title: "Hoàng Anh Dương",
-                  name: "Tuấn Hùng",
-                  date: "01/07/2000",
-                  status: true,
-                  like: 50,
-                  rating: 5,
-                  linkZoomIn: "/"
-              },
-              {
-                  title: "Hoàng Anh Dương",
-                  name: "Tuấn Hùng",
-                  date: "01/07/2000",
-                  status: false,
-                  like: 50,
-                  rating: 5,
-                  linkZoomIn: "/"
-              }
-          ],
           owners: [
               {    
                   title: "Hoàng Anh Dương",
@@ -211,9 +137,6 @@ export default {
     methods: {
         removeElementOwner: function (index) {
             this.$delete(this.owners, index)
-        },
-        removeElementAdmin: function (index) {
-            this.$delete(this.admin, index)
         }
     }
 }

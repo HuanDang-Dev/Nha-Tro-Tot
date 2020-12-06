@@ -40,6 +40,18 @@ export default new Router({
             name: 'admin',
             component: () =>
                 import ('./components/admin/Admin.vue')
+        },
+        {
+            path: '/owner',
+            name: 'owner',
+            component: () =>
+                import ('./components/owner/Owner.vue')
+        },
+        {
+            path: '/rule',
+            name: 'rule',
+            component: () =>
+                import ('./components/support/Rule.vue')
         }
     ]
 })
